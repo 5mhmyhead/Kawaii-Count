@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+// PLAY A STARTUP ANIMATION ON FIRST OPEN
 public class StartupAnimationController implements Initializable
 {
     @FXML private AnchorPane mainPane;
