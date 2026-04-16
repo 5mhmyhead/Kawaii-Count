@@ -5,6 +5,7 @@ import javafx.animation.Interpolator;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
@@ -24,33 +25,9 @@ public class StartupAnimationController implements Initializable
     public void initialize(URL location, ResourceBundle resources)
     {
         // CREATES AN ANIMATION WHERE THE TITLE PAGE SLIDES INTO THE SCREEN ON STARTUP
-        TranslateTransition transitionImg = new TranslateTransition();
-        TranslateTransition transitionPane = new TranslateTransition();
-        TranslateTransition transitionCircle = new TranslateTransition();
-
-        transitionImg.setNode(wakuImage);
-
-        transitionImg.setDelay(Duration.millis(500));
-        transitionImg.setDuration(Duration.seconds(1));
-
-        transitionImg.setInterpolator(Interpolator.SPLINE(0.70, 0.0, 0.30, 1.0));
-        transitionImg.setToX(-249);
-
-        transitionPane.setNode(mainPane);
-
-        transitionPane.setDelay(Duration.millis(500));
-        transitionPane.setDuration(Duration.seconds(1));
-
-        transitionPane.setInterpolator(Interpolator.SPLINE(0.70, 0.0, 0.30, 1.0));
-        transitionPane.setToX(-600);
-
-        transitionCircle.setNode(circlePane);
-
-        transitionCircle.setDelay(Duration.millis(500));
-        transitionCircle.setDuration(Duration.seconds(1));
-
-        transitionCircle.setInterpolator(Interpolator.SPLINE(0.70, 0.0, 0.30, 1.0));
-        transitionCircle.setToX(-500);
+        TranslateTransition transitionImg = createTransition(wakuImage, -250);
+        TranslateTransition transitionPane = createTransition(mainPane, -600);
+        TranslateTransition transitionCircle = createTransition(circlePane, -500);
 
         transitionImg.play();
         transitionPane.play();
@@ -68,8 +45,23 @@ public class StartupAnimationController implements Initializable
         });
     }
 
+    // HELPER FUNCTION TO CREATE A RIGHT TO LEFT SLIDE TRANSITION
+    private TranslateTransition createTransition(Node node, double toX)
+    {
+        TranslateTransition transition = new TranslateTransition();
+
+        transition.setNode(node);
+        transition.setDelay(Duration.millis(500));
+        transition.setDuration(Duration.seconds(1));
+
+        transition.setInterpolator(Interpolator.SPLINE(0.70, 0.0, 0.30, 1.0));
+        transition.setToX(toX);
+
+        return transition;
+    }
+
     private void switchToTitlePage() throws IOException
     {
-        App.setRoot("title-page");
+        App.setRoot("title-page", App.WIDTH, App.HEIGHT);
     }
 }

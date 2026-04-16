@@ -246,7 +246,7 @@
          <Button layoutX="239.0" layoutY="453.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="175.0" text="See How It Works" textFill="#f8e9e5">
             <styleClass>
                <String fx:value="poppins-black" />
-               <String fx:value="button-pink" />
+               <String fx:value="button-pink-with-border" />
             </styleClass>
          </Button>
          <Button layoutX="49.0" layoutY="453.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="175.0" text="Enter Inventory" textFill="#e76d8a">

@@ -37,16 +37,16 @@ public class App extends Application
     }
 
     // PUBLIC FUNCTION TO SWITCH BETWEEN SCENES
-    public static void setRoot(String fxml) throws IOException
+    public static void setRoot(String fxml, int width, int height) throws IOException
     {
         Stage stage = (Stage) scene.getWindow();
-        scene = new Scene(loadFXML(fxml), WIDTH, HEIGHT);
+        scene = new Scene(loadFXML(fxml), width, height);
 
         stage.setScene(scene);
         stage.sizeToScene();
     }
 
-    public static Parent loadFXML(String fxml) throws IOException
+    private static Parent loadFXML(String fxml) throws IOException
     {
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("fxml/" + fxml + ".fxml"));
         return fxmlLoader.load();
