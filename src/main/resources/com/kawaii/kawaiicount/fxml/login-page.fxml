@@ -54,6 +54,154 @@
             </Circle>
          </children>
       </AnchorPane>
+      <AnchorPane fx:id="parentContainer1" layoutY="576.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="768.0" stylesheets="@../styles/style.css">
+         <children>
+            <Rectangle fill="#f8e9e5" height="576.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="768.0" />
+            <AnchorPane layoutY="10.0" prefHeight="556.0" prefWidth="290.0" stylesheets="@../styles/style.css">
+               <children>
+                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#e76d8a" height="556.0" layoutX="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="290.0" />
+                  <Circle centerX="34.75" centerY="34.75" fill="#e76d8a" layoutX="265.25" radius="34.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle centerX="34.75" centerY="34.75" fill="#e76d8a" layoutX="265.25" layoutY="69.5" radius="34.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle centerX="34.75" centerY="34.75" fill="#e76d8a" layoutX="265.25" layoutY="139.0" radius="34.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle centerX="34.75" centerY="34.75" fill="#e76d8a" layoutX="265.25" layoutY="208.5" radius="34.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle centerX="34.75" centerY="34.75" fill="#e76d8a" layoutX="265.25" layoutY="278.0" radius="34.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle centerX="34.75" centerY="34.75" fill="#e76d8a" layoutX="265.25" layoutY="347.5" radius="34.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle centerX="34.75" centerY="34.75" fill="#e76d8a" layoutX="265.25" layoutY="417.0" radius="34.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle centerX="34.75" centerY="34.75" fill="#e76d8a" layoutX="265.25" layoutY="486.5" radius="34.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle centerX="140.0" centerY="140.0" layoutX="-18.0" layoutY="239.0" radius="140.0" rotate="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                     <fill>
+                        <LinearGradient endX="0.1327014218009478" endY="1.0" startX="0.6398104265402844">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.949999988079071" green="0.6650000214576721" blue="0.7267500162124634" opacity="0.800000011920929" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006711409395973154">
+                                 <color>
+                                    <Color red="0.9399999976158142" green="0.676800012588501" blue="0.7382133603096008" opacity="0.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9300000071525574" green="0.6789000034332275" blue="0.7333049774169922" opacity="0.5" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <Circle centerX="91.5" centerY="91.5" layoutX="98.0" layoutY="44.0" radius="91.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                     <fill>
+                        <LinearGradient endX="0.5118483412322274" endY="0.8862559241706162" startX="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.949999988079071" green="0.6650000214576721" blue="0.7267500162124634" opacity="0.800000011920929" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006711409395973154">
+                                 <color>
+                                    <Color red="0.949999988079071" green="0.6650000214576721" blue="0.7267500162124634" opacity="0.800000011920929" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.95686274766922" green="0.6627451181411743" blue="0.7254902124404907" opacity="0.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <Rectangle fill="#f8e9e5" height="556.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="10.0" />
+                  <ImageView fitHeight="350.0" fitWidth="350.0" layoutX="47.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/wakuGasp.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="336.0" layoutY="10.0" prefHeight="556.0" prefWidth="433.0">
+               <children>
+                  <ImageView fitHeight="41.0" fitWidth="58.0" layoutX="188.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logoBlue.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="53.0" layoutY="108.0" styleClass="playfair-black" text="Recover Account" textFill="#263757">
+                     <font>
+                        <Font name="Georgia Italic" size="42.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="112.0" layoutY="161.0" styleClass="poppins-regular" text="Forgot your password? Don't worry!" textFill="#263757" />
+                  <Button layoutX="88.0" layoutY="444.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="125.0" text="Reset Password">
+                     <styleClass>
+                        <String fx:value="button-pink" />
+                        <String fx:value="poppins-regular" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="219.0" layoutY="444.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="125.0" text="Cancel">
+                     <styleClass>
+                        <String fx:value="button-pink" />
+                        <String fx:value="poppins-regular" />
+                     </styleClass>
+                  </Button>
+                  <Label layoutX="42.0" layoutY="212.0" styleClass="poppins-regular" text="Please enter your email address." textFill="#263757bf" />
+                  <Label layoutX="42.0" layoutY="292.0" styleClass="poppins-regular" text="Enter your new password" textFill="#263757bf" />
+                  <AnchorPane layoutX="42.0" layoutY="235.0" prefHeight="32.0" prefWidth="350.0" styleClass="login-field-container">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="8.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/iconUsername.png" />
+                           </image>
+                        </ImageView>
+                        <TextField layoutX="33.0" prefHeight="32.0" prefWidth="315.0">
+                           <styleClass>
+                              <String fx:value="login-field-input" />
+                              <String fx:value="poppins-regular" />
+                           </styleClass>
+                        </TextField>
+                        <Line endY="24.0" layoutX="33.0" layoutY="5.0" stroke="#e76d8a" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="42.0" layoutY="315.0" prefHeight="32.0" prefWidth="350.0" styleClass="login-field-container">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="8.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/iconPassword.png" />
+                           </image>
+                        </ImageView>
+                        <TextField layoutX="33.0" prefHeight="32.0" prefWidth="315.0">
+                           <styleClass>
+                              <String fx:value="login-field-input" />
+                              <String fx:value="poppins-regular" />
+                           </styleClass>
+                        </TextField>
+                        <Line endY="24.0" layoutX="33.0" layoutY="5.0" stroke="#e76d8a" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="42.0" layoutY="384.0" prefHeight="32.0" prefWidth="350.0" styleClass="login-field-container">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="8.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/iconPassword.png" />
+                           </image>
+                        </ImageView>
+                        <TextField layoutX="33.0" prefHeight="32.0" prefWidth="315.0">
+                           <styleClass>
+                              <String fx:value="login-field-input" />
+                              <String fx:value="poppins-regular" />
+                           </styleClass>
+                        </TextField>
+                        <Line endY="24.0" layoutX="33.0" layoutY="5.0" stroke="#e76d8a" />
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="42.0" layoutY="361.0" styleClass="poppins-regular" text="Confirm your new password" textFill="#263757bf" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
       <AnchorPane layoutX="336.0" layoutY="10.0" prefHeight="556.0" prefWidth="433.0">
          <children>
             <ImageView fitHeight="41.0" fitWidth="58.0" layoutX="188.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true">
@@ -80,12 +228,12 @@
                </styleClass>
             </Button>
             <Label layoutX="117.0" layoutY="474.0" styleClass="poppins-regular" text="Don't have an account?" textFill="#253657" />
-            <Label layoutX="265.0" layoutY="474.0" text="Register" textFill="#e76d8a">
+            <Label layoutX="265.0" layoutY="474.0" onMouseClicked="#switchToCreateAccountPage" text="Register" textFill="#e76d8a">
                <styleClass>
                   <String fx:value="poppins-bold" />
                   <String fx:value="text-underline" />
                </styleClass></Label>
-            <Label layoutX="223.0" layoutY="370.0" text="Forgot Password?" textFill="#e76d8a">
+            <Label layoutX="223.0" layoutY="370.0" onMouseClicked="#switchToRecoverPage" text="Forgot Password?" textFill="#e76d8a">
                <styleClass>
                   <String fx:value="poppins-regular" />
                   <String fx:value="text-underline" />
@@ -301,5 +449,209 @@
             <Image url="@../images/wakuCute.png" />
          </image>
       </ImageView>
+      <AnchorPane fx:id="parentContainer2" layoutY="-576.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="768.0" stylesheets="@../styles/style.css">
+         <children>
+            <Rectangle fill="#f8e9e5" height="576.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="768.0" />
+            <AnchorPane layoutY="10.0" prefHeight="556.0" prefWidth="144.75" stylesheets="@../styles/style.css">
+               <children>
+                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#e76d8a" height="556.0" layoutX="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+                  <Circle centerX="34.75" centerY="34.75" fill="#e76d8a" layoutX="75.25" radius="34.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle centerX="34.75" centerY="34.75" fill="#e76d8a" layoutX="75.25" layoutY="69.5" radius="34.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle centerX="34.75" centerY="34.75" fill="#e76d8a" layoutX="75.25" layoutY="139.0" radius="34.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle centerX="34.75" centerY="34.75" fill="#e76d8a" layoutX="75.25" layoutY="208.5" radius="34.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle centerX="34.75" centerY="34.75" fill="#e76d8a" layoutX="75.25" layoutY="278.0" radius="34.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle centerX="34.75" centerY="34.75" fill="#e76d8a" layoutX="75.25" layoutY="347.5" radius="34.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle centerX="34.75" centerY="34.75" fill="#e76d8a" layoutX="75.25" layoutY="417.0" radius="34.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle centerX="34.75" centerY="34.75" fill="#e76d8a" layoutX="75.25" layoutY="486.5" radius="34.75" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle centerX="66.0" centerY="66.0" layoutX="-45.0" layoutY="29.0" radius="66.0" rotate="15.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                     <fill>
+                        <LinearGradient endX="0.1327014218009478" endY="1.0" startX="0.6398104265402844">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.949999988079071" green="0.6650000214576721" blue="0.7267500162124634" opacity="0.800000011920929" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006711409395973154">
+                                 <color>
+                                    <Color red="0.9399999976158142" green="0.676800012588501" blue="0.7382133603096008" opacity="0.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9300000071525574" green="0.6789000034332275" blue="0.7333049774169922" opacity="0.5" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <Circle centerX="174.0" centerY="174.0" layoutX="-261.0" layoutY="155.0" radius="174.0" rotate="-25.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                     <fill>
+                        <LinearGradient endX="0.5118483412322274" endY="0.8862559241706162" startX="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.949999988079071" green="0.6650000214576721" blue="0.7267500162124634" opacity="0.800000011920929" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006711409395973154">
+                                 <color>
+                                    <Color red="0.949999988079071" green="0.6650000214576721" blue="0.7267500162124634" opacity="0.800000011920929" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.95686274766922" green="0.6627451181411743" blue="0.7254902124404907" opacity="0.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <Rectangle fill="#f8e9e5" height="556.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="10.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="144.75" layoutY="10.0" prefHeight="556.0" prefWidth="623.25">
+               <children>
+                  <ImageView fitHeight="41.0" fitWidth="58.0" layoutX="283.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/logoBlue.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="150.0" layoutY="73.0" styleClass="playfair-black" text="Create Account" textFill="#263757">
+                     <font>
+                        <Font name="Georgia Italic" size="45.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="235.0" layoutY="133.0" styleClass="poppins-regular" text="Start your journey with us!" textFill="#263757" />
+                  <AnchorPane layoutX="82.0" layoutY="166.0" prefHeight="75.0" prefWidth="460.0">
+                     <children>
+                        <Label styleClass="poppins-regular" text="What type of account are you registering?" textFill="#263757bf">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="235.0" layoutY="23.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="225.0" text="Worker" textAlignment="CENTER" textFill="#e76d8a">
+                           <styleClass>
+                              <String fx:value="button-white-with-border" />
+                              <String fx:value="poppins-bold" />
+                           </styleClass>
+                        </Button>
+                        <Button layoutY="23.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="225.0" text="Manager">
+                           <styleClass>
+                              <String fx:value="button-pink" />
+                              <String fx:value="poppins-bold" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="82.0" layoutY="238.0" prefHeight="75.0" prefWidth="460.0">
+                     <children>
+                        <AnchorPane layoutY="30.0" prefHeight="32.0" prefWidth="460.0" styleClass="login-field-container">
+                           <children>
+                              <TextField layoutX="3.0" prefHeight="32.0" prefWidth="454.0">
+                                 <styleClass>
+                                    <String fx:value="login-field-input" />
+                                    <String fx:value="poppins-regular" />
+                                 </styleClass>
+                              </TextField>
+                              <Rectangle fill="#f8e9e5" height="2.0" layoutX="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="147.0" />
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="14.0" layoutY="22.0" styleClass="poppins-regular" text="Manager Provided Password" textFill="#e76d8abf">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                        <Label layoutY="2.0" styleClass="poppins-regular" text="Please enter the provided manager password to create a Manager account." textFill="#263757bf">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="82.0" layoutY="320.0" prefHeight="42.0" prefWidth="460.0">
+                     <children>
+                        <AnchorPane layoutY="8.0" prefHeight="32.0" prefWidth="225.0" styleClass="login-field-container">
+                           <children>
+                              <Rectangle fill="#f8e9e5" height="2.0" layoutX="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="56.0" />
+                              <TextField layoutX="3.0" prefHeight="32.0" prefWidth="219.0">
+                                 <styleClass>
+                                    <String fx:value="login-field-input" />
+                                    <String fx:value="poppins-regular" />
+                                 </styleClass>
+                              </TextField>
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="14.0" styleClass="poppins-regular" text="Username" textFill="#e76d8abf">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutX="235.0" layoutY="8.0" prefHeight="32.0" prefWidth="225.0" styleClass="login-field-container">
+                           <children>
+                              <Rectangle fill="#f8e9e5" height="2.0" layoutX="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="53.0" />
+                              <TextField layoutX="3.0" prefHeight="32.0" prefWidth="219.0">
+                                 <styleClass>
+                                    <String fx:value="login-field-input" />
+                                    <String fx:value="poppins-regular" />
+                                 </styleClass>
+                              </TextField>
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="249.0" styleClass="poppins-regular" text="Password" textFill="#e76d8abf">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="82.0" layoutY="375.0" prefHeight="75.0" prefWidth="460.0">
+                     <children>
+                        <Label layoutY="2.0" styleClass="poppins-regular" text="In case you forget your password, please enter your email address for recovery." textFill="#263757bf">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutY="32.0" prefHeight="32.0" prefWidth="460.0" styleClass="login-field-container">
+                           <children>
+                              <Rectangle fill="#f8e9e5" height="2.0" layoutX="12.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="75.0" />
+                              <TextField layoutX="3.0" prefHeight="32.0" prefWidth="454.0">
+                                 <styleClass>
+                                    <String fx:value="login-field-input" />
+                                    <String fx:value="poppins-regular" />
+                                 </styleClass>
+                              </TextField>
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="14.0" layoutY="24.0" styleClass="poppins-regular" text="Email address" textFill="#e76d8abf">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="82.0" layoutY="467.0" prefHeight="75.0" prefWidth="460.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="460.0" text="Create your new Account!">
+                           <styleClass>
+                              <String fx:value="button-pink" />
+                              <String fx:value="poppins-bold" />
+                           </styleClass>
+                        </Button>
+                        <Label layoutX="294.0" layoutY="40.0" text="Login" textFill="#e76d8a">
+                           <styleClass>
+                              <String fx:value="poppins-bold" />
+                              <String fx:value="text-underline" />
+                           </styleClass>
+                        </Label>
+                        <Label layoutX="130.0" layoutY="40.0" styleClass="poppins-regular" text="Already have an account?" textFill="#253657" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

@@ -70,6 +70,55 @@
     -fx-background-radius: 10;
 }
 
+.button-pink {
+    -fx-text-fill: -fx-off-white;
+    -fx-background-color: -fx-soft-red;
+
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+
+    transition: 0.2s ease;
+}
+
+.button-pink:hover {
+    -fx-cursor: hand;
+
+    -fx-text-fill: -fx-soft-red;
+    -fx-background-color: -fx-off-white;
+
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+
+    -fx-border-width: 1;
+    -fx-border-style: solid;
+    -fx-border-color: -fx-soft-red;
+}
+
+.button-white-with-border {
+    -fx-text-fill: -fx-soft-red;
+    -fx-background-color: -fx-off-white;
+
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+
+    -fx-border-width: 1;
+    -fx-border-style: solid;
+    -fx-border-color: -fx-soft-red;
+
+    transition: 0.2s ease;
+}
+
+.button-white-with-border:hover {
+    -fx-outline: none;
+    -fx-cursor: hand;
+
+    -fx-text-fill: -fx-off-white;
+    -fx-background-color: -fx-soft-red;
+
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
 .button-white {
     -fx-text-fill: -fx-soft-red;
     -fx-background-color: -fx-off-white;
@@ -93,30 +142,6 @@
     -fx-border-width: 1;
     -fx-border-style: solid;
     -fx-border-color: -fx-off-white;
-}
-
-.button-pink {
-    -fx-text-fill: -fx-off-white;
-    -fx-background-color: -fx-soft-red;
-
-    -fx-border-radius: 10;
-    -fx-background-radius: 10;
-
-    transition: 0.2s ease;
-}
-
-.button-pink:hover {
-    -fx-cursor: hand;
-
-    -fx-text-fill: -fx-soft-red;
-    -fx-background-color: -fx-off-white;
-
-    -fx-border-radius: 10;
-    -fx-background-radius: 10;
-
-    -fx-border-width: 1;
-    -fx-border-style: solid;
-    -fx-border-color: -fx-soft-red;
 }
 
 /*LOGIN PAGE TEXT FIELDS*/

@@ -1,11 +1,10 @@
 package com.kawaii.kawaiicount.controllers;
 
 import com.kawaii.kawaiicount.App;
-import javafx.animation.Interpolator;
+import com.kawaii.kawaiicount.utilities.TransitionHelper;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
-import javafx.util.Duration;
 
 import java.io.IOException;
 
@@ -16,19 +15,49 @@ public class LoginPageController
     @FXML
     private void switchToTitlePage()
     {
-        TranslateTransition transition = new TranslateTransition();
-
-        transition.setNode(parentContainer);
-        transition.setDuration(Duration.seconds(1));
-
-        transition.setInterpolator(Interpolator.SPLINE(0.70, 0.0, 0.30, 1.0));
-        transition.setToX(768);
-
+        TranslateTransition transition = TransitionHelper.createSlideX(parentContainer, 768, 0, 1000);
         transition.play();
+
         transition.setOnFinished(_ -> {
             try
             {
                 App.setRoot("title-page", App.WIDTH, App.HEIGHT);
+            }
+            catch (IOException e)
+            {
+                System.out.println("Failed to Switch Scenes: " + e.getMessage());
+            }
+        });
+    }
+
+    @FXML
+    private void switchToRecoverPage()
+    {
+        TranslateTransition transition = TransitionHelper.createSlideY(parentContainer, -576, 0, 1000);
+        transition.play();
+
+        transition.setOnFinished(_ -> {
+            try
+            {
+                App.setRoot("recover-page", App.WIDTH, App.HEIGHT);
+            }
+            catch (IOException e)
+            {
+                System.out.println("Failed to Switch Scenes: " + e.getMessage());
+            }
+        });
+    }
+
+    @FXML
+    private void switchToCreateAccountPage()
+    {
+        TranslateTransition transition = TransitionHelper.createSlideY(parentContainer, 576, 0, 1000);
+        transition.play();
+
+        transition.setOnFinished(_ -> {
+            try
+            {
+                App.setRoot("create-account-page", App.WIDTH, App.HEIGHT);
             }
             catch (IOException e)
             {

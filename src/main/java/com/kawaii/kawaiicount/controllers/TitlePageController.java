@@ -1,12 +1,11 @@
 package com.kawaii.kawaiicount.controllers;
 
 import com.kawaii.kawaiicount.App;
-import javafx.animation.Interpolator;
+import com.kawaii.kawaiicount.utilities.TransitionHelper;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import javafx.util.Duration;
 
 import java.awt.*;
 import java.io.IOException;
@@ -47,15 +46,9 @@ public class TitlePageController
     @FXML
     private void switchToLoginPage()
     {
-        TranslateTransition transition = new TranslateTransition();
-
-        transition.setNode(parentContainer);
-        transition.setDuration(Duration.seconds(1));
-
-        transition.setInterpolator(Interpolator.SPLINE(0.70, 0.0, 0.30, 1.0));
-        transition.setToX(-768);
-
+        TranslateTransition transition = TransitionHelper.createSlideX(parentContainer, -768, 0, 1000);
         transition.play();
+
         transition.setOnFinished(_ -> {
             try
             {
