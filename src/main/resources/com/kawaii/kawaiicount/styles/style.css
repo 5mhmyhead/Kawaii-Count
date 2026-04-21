@@ -168,6 +168,16 @@
     -fx-highlight-text-fill: -fx-off-white;
 }
 
+.login-password-input {
+    -fx-text-fill: -fx-dark-blue;
+
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+
+    -fx-highlight-fill: -fx-soft-red;
+    -fx-highlight-text-fill: -fx-off-white;
+}
+
 .text-underline:hover {
     -fx-cursor: hand;
     -fx-underline: true;

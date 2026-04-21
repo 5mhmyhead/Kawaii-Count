@@ -15,7 +15,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="parentContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="768.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kawaii.kawaiicount.controllers.LoginPageController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="768.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kawaii.kawaiicount.controllers.LoginPageController">
    <children>
       <Rectangle fill="#f8e9e5" height="576.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="768.0" />
       <AnchorPane layoutY="10.0" prefHeight="556.0" prefWidth="300.0" stylesheets="@../styles/style.css">
@@ -73,7 +73,7 @@
                   <String fx:value="poppins-regular" />
                </styleClass>
             </Button>
-            <Button layoutX="224.0" layoutY="434.0" mnemonicParsing="false" onAction="#switchToTitlePage" prefHeight="30.0" prefWidth="105.0" text="Cancel">
+            <Button layoutX="224.0" layoutY="434.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="105.0" text="Cancel">
                <styleClass>
                   <String fx:value="button-pink" />
                   <String fx:value="poppins-regular" />
@@ -85,7 +85,7 @@
                   <String fx:value="poppins-bold" />
                   <String fx:value="text-underline" />
                </styleClass></Label>
-            <Label layoutX="223.0" layoutY="370.0" onMouseClicked="#switchToRecoverPage" text="Forgot Password?" textFill="#e76d8a">
+            <Label layoutX="223.0" layoutY="370.0" text="Forgot Password?" textFill="#e76d8a">
                <styleClass>
                   <String fx:value="poppins-regular" />
                   <String fx:value="text-underline" />

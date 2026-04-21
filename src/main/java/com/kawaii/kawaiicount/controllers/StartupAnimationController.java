@@ -1,7 +1,7 @@
 package com.kawaii.kawaiicount.controllers;
 
 import com.kawaii.kawaiicount.App;
-import com.kawaii.kawaiicount.utilities.TransitionHelper;
+import com.kawaii.kawaiicount.utilities.AnimationHelper;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
@@ -20,9 +20,9 @@ public class StartupAnimationController
     private void initialize()
     {
         // CREATES AN ANIMATION WHERE THE TITLE PAGE SLIDES INTO THE SCREEN ON STARTUP
-        TranslateTransition transitionImg = TransitionHelper.createSlideX(wakuImage, -250, 500, 1000);
-        TranslateTransition transitionPane = TransitionHelper.createSlideX(mainPane, -600, 500, 1000);
-        TranslateTransition transitionCircle = TransitionHelper.createSlideX(circlePane, -500, 500, 1000);
+        TranslateTransition transitionImg = AnimationHelper.createSlideX(wakuImage, -250, 500, 1000);
+        TranslateTransition transitionPane = AnimationHelper.createSlideX(mainPane, -600, 500, 1000);
+        TranslateTransition transitionCircle = AnimationHelper.createSlideX(circlePane, -500, 500, 1000);
 
         transitionImg.play();
         transitionPane.play();

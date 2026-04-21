@@ -1,7 +1,7 @@
 package com.kawaii.kawaiicount.controllers;
 
 import com.kawaii.kawaiicount.App;
-import com.kawaii.kawaiicount.utilities.TransitionHelper;
+import com.kawaii.kawaiicount.utilities.AnimationHelper;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -46,7 +46,7 @@ public class TitlePageController
     @FXML
     private void switchToLoginPage()
     {
-        TranslateTransition transition = TransitionHelper.createSlideX(parentContainer, -768, 0, 1000);
+        TranslateTransition transition = AnimationHelper.createSlideX(parentContainer, -768, 0, 1000);
         transition.play();
 
         transition.setOnFinished(_ -> {

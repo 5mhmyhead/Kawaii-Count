@@ -1,0 +1,72 @@
+package com.kawaii.kawaiicount.utilities;
+
+import javafx.animation.*;
+import javafx.scene.Node;
+import javafx.scene.control.Label;
+import javafx.util.Duration;
+
+public class AnimationHelper
+{
+    // HELPER FUNCTION TO CREATE A HORIZONTAL SLIDE TRANSITION DURING LOGIN SCREEN
+    public static TranslateTransition createSlideX(Node node, double toX, int delay, int duration)
+    {
+        TranslateTransition transition = new TranslateTransition();
+
+        transition.setNode(node);
+        transition.setDelay(Duration.millis(delay));
+        transition.setDuration(Duration.millis(duration));
+
+        transition.setInterpolator(Interpolator.SPLINE(0.70, 0.0, 0.30, 1.0));
+        transition.setToX(toX);
+
+        return transition;
+    }
+
+    // HELPER FUNCTION TO CREATE A VERTICAL SLIDE TRANSITION DURING LOGIN SCREEN
+    public static TranslateTransition createSlideY(Node node, double toY, int delay, int duration)
+    {
+        TranslateTransition transition = new TranslateTransition();
+
+        transition.setNode(node);
+        transition.setDelay(Duration.millis(delay));
+        transition.setDuration(Duration.millis(duration));
+
+        transition.setInterpolator(Interpolator.SPLINE(0.70, 0.0, 0.30, 1.0));
+        transition.setToY(toY);
+
+        return transition;
+    }
+
+    public static FadeTransition createFade(Node node, double fromValue, double toValue, int delay, int duration)
+    {
+        FadeTransition fade = new FadeTransition(Duration.millis(duration), node);
+
+        fade.setDelay(Duration.millis(delay));
+        fade.setFromValue(fromValue);
+        fade.setToValue(toValue);
+
+        return fade;
+    }
+
+    public static void showErrorMessage(Label label, String message, int displayDuration, int fadeDuration)
+    {
+        // STOP ANY EXISTING ANIMATION ON THIS LABEL
+        Object existing = label.getProperties().get("animation");
+
+        if (existing instanceof SequentialTransition)
+            ((SequentialTransition) existing).stop();
+
+        label.setText(message);
+        label.setOpacity(1);
+
+        PauseTransition pause = new PauseTransition(Duration.millis(displayDuration));
+        FadeTransition fade = new FadeTransition(Duration.millis(fadeDuration), label);
+
+        fade.setFromValue(1);
+        fade.setToValue(0);
+
+        SequentialTransition sequence = new SequentialTransition(pause, fade);
+        label.getProperties().put("animation", sequence);
+        sequence.play();
+    }
+}

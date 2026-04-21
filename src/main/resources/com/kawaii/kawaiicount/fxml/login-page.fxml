@@ -3,6 +3,7 @@
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -215,7 +216,7 @@
                </font>
             </Label>
             <Label layoutX="138.0" layoutY="161.0" styleClass="poppins-regular" text="Log in before you continue" textFill="#263757" />
-            <Button layoutX="104.0" layoutY="434.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="105.0" text="Log in">
+            <Button layoutX="104.0" layoutY="434.0" mnemonicParsing="false" onAction="#login" prefHeight="30.0" prefWidth="105.0" text="Log in">
                <styleClass>
                   <String fx:value="button-pink" />
                   <String fx:value="poppins-regular" />
@@ -247,7 +248,7 @@
                         <Image url="@../images/iconUsername.png" />
                      </image>
                   </ImageView>
-                  <TextField layoutX="33.0" prefHeight="32.0" prefWidth="190.0">
+                  <TextField fx:id="usernameField" layoutX="33.0" prefHeight="32.0" prefWidth="190.0">
                      <styleClass>
                         <String fx:value="login-field-input" />
                         <String fx:value="poppins-regular" />
@@ -262,15 +263,11 @@
                         <Image url="@../images/iconPassword.png" />
                      </image>
                   </ImageView>
-                  <TextField layoutX="33.0" prefHeight="32.0" prefWidth="190.0">
-                     <styleClass>
-                        <String fx:value="login-field-input" />
-                        <String fx:value="poppins-regular" />
-                     </styleClass>
-                  </TextField>
+                  <PasswordField fx:id="passwordField" layoutX="33.0" prefHeight="32.0" prefWidth="190.0" styleClass="login-password-input" />
                   <Line endY="24.0" layoutX="33.0" layoutY="5.0" stroke="#e76d8a" />
                </children>
             </AnchorPane>
+            <Label fx:id="errorMessage" alignment="CENTER" layoutX="90.0" layoutY="197.0" prefHeight="32.0" prefWidth="255.0" styleClass="poppins-bold" textAlignment="CENTER" textFill="#e76d8a" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="-768.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="576.0" prefWidth="768.0">
@@ -534,11 +531,11 @@
                         </Label>
                         <Button layoutX="235.0" layoutY="23.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="225.0" text="Worker" textAlignment="CENTER" textFill="#e76d8a">
                            <styleClass>
-                              <String fx:value="button-white-with-border" />
+                              <String fx:value="button-pink" />
                               <String fx:value="poppins-bold" />
                            </styleClass>
                         </Button>
-                        <Button layoutY="23.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="225.0" text="Manager">
+                        <Button disable="true" layoutY="23.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="225.0" text="Manager">
                            <styleClass>
                               <String fx:value="button-pink" />
                               <String fx:value="poppins-bold" />
