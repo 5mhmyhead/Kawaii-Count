@@ -26,7 +26,7 @@ public class App extends Application
     public void start(Stage stage) throws IOException
     {
         initialize();
-        scene = new Scene(loadFXML("startup-animation"), WIDTH, HEIGHT);
+        scene = new Scene(loadFXML("inventory-page"), MAIN_WIDTH, MAIN_HEIGHT);
 
         stage.setTitle("Kawaii Count");
         stage.setResizable(false);

@@ -1,9 +1,15 @@
 package com.kawaii.kawaiicount.utilities;
 
+import com.kawaii.kawaiicount.App;
+import com.kawaii.kawaiicount.objects.ActiveSidebarItem;
+import com.kawaii.kawaiicount.objects.SidebarItem;
 import javafx.animation.*;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
+import javafx.scene.paint.Color;
 import javafx.util.Duration;
+
+import java.io.IOException;
 
 public class AnimationHelper
 {
@@ -68,5 +74,55 @@ public class AnimationHelper
         SequentialTransition sequence = new SequentialTransition(pause, fade);
         label.getProperties().put("animation", sequence);
         sequence.play();
+    }
+
+    // SETS UP THE ANIMATED SIDEBAR SLIDE
+    public static void setupSidebarButton(ActiveSidebarItem active, SidebarItem target)
+    {
+        final Color SOFT_RED = new Color(0.906, 0.427, 0.541, 1.0);
+        final Color OFF_WHITE = new Color(0.973, 0.914, 0.898, 1.0);
+
+        TranslateTransition slide = new TranslateTransition(Duration.millis(target.duration()), active.selectionIndicator());
+        slide.setInterpolator(Interpolator.SPLINE(0.70, 0.0, 0.30, 1.0));
+        slide.setToY(target.toY());
+
+        Timeline fromButtonColor = new Timeline(
+                new KeyFrame(Duration.ZERO, new KeyValue(active.button().textFillProperty(), SOFT_RED)),
+                new KeyFrame(Duration.millis(100), new KeyValue(active.button().textFillProperty(), OFF_WHITE))
+        );
+
+        Timeline toButtonColor = new Timeline(
+                new KeyFrame(Duration.ZERO, new KeyValue(target.button().textFillProperty(), OFF_WHITE)),
+                new KeyFrame(Duration.millis(target.duration()), new KeyValue(target.button().textFillProperty(), SOFT_RED))
+        );
+
+        FadeTransition fadeFromIcon = createFade(active.icon(), 1, 0, 0, 100);
+        FadeTransition fadeToIcon = createFade(target.icon(), 1, 0, 0, target.duration());
+
+        slide.setOnFinished(_ -> {
+            try
+            {
+                // WIDTH AND HEIGHT CHANGES BACK TO SMALL WHEN SIGNING OUT
+                boolean isSignOut = target.fxml().equals("title-page");
+                int width = isSignOut ? App.WIDTH : App.MAIN_WIDTH;
+                int height = isSignOut ? App.HEIGHT : App.MAIN_HEIGHT;
+
+                App.setRoot(target.fxml(), width, height);
+            }
+            catch (IOException e)
+            {
+                System.out.println("Failed to switch scenes: " + e.getMessage());
+            }
+        });
+
+        target.button().setOnAction(_ -> {
+            active.selectionIndicator().setMouseTransparent(true);
+
+            fromButtonColor.play();
+            toButtonColor.play();
+            fadeFromIcon.play();
+            fadeToIcon.play();
+            slide.play();
+        });
     }
 }

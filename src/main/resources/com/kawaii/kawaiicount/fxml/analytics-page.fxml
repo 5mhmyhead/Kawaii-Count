@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parentContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kawaii.kawaiicount.controllers.analyticsPageController">
+   <children>
+      <Rectangle fill="#f8e9e5" height="720.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1280.0" />
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="700.0" prefWidth="260.0">
+         <children>
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#e76d8a" height="700.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="260.0" />
+            <ImageView fitHeight="40.0" fitWidth="56.0" layoutX="11.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logoWhite.png" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="selectionIndicator" layoutY="285.0" prefHeight="100.0" prefWidth="260.0">
+               <children>
+                  <Rectangle fill="#f8e9e5" height="80.0" layoutX="25.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="236.0" />
+                  <Rectangle fill="#e76d8a" height="20.0" layoutX="10.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="230.0" />
+                  <Rectangle fill="#e76d8a" height="20.0" layoutX="10.0" layoutY="76.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="230.0" />
+                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#e76d8a" height="25.0" layoutX="210.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" />
+                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#e76d8a" height="25.0" layoutX="210.0" layoutY="76.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="50.0" />
+                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#f8e9e5" height="52.0" layoutX="10.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="25.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="125.0" prefHeight="240.0" prefWidth="260.0">
+               <children>
+                  <AnchorPane prefHeight="60.0" prefWidth="260.0">
+                     <children>
+                        <ImageView fx:id="inventoryPink" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/inventoryPink.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="inventoryWhite" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/inventoryWhite.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="inventoryButton" layoutX="10.0" layoutY="5.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="250.0" text="Inventory" textFill="#f8e9e5">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="poppins-semibold" />
+                              <String fx:value="invisible-button" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="60.0" prefHeight="60.0" prefWidth="260.0">
+                     <children>
+                        <ImageView fx:id="menuPink" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/menuPink.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="menuWhite" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/menuWhite.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="menuButton" layoutX="10.0" layoutY="5.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="250.0" text="Menu" textFill="#f8e9e5">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="poppins-semibold" />
+                              <String fx:value="invisible-button" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="120.0" prefHeight="60.0" prefWidth="260.0">
+                     <children>
+                        <ImageView fx:id="ordersPink" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/ordersPink.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="ordersWhite" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/ordersWhite.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="ordersButton" layoutX="10.0" layoutY="5.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="250.0" text="Orders" textFill="#f8e9e5">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="poppins-semibold" />
+                              <String fx:value="invisible-button" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="180.0" prefHeight="60.0" prefWidth="260.0">
+                     <children>
+                        <ImageView fx:id="analyticsWhite" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/analyticsWhite.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="analyticsPink" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/analyticsPink.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="analyticsButton" layoutX="10.0" layoutY="5.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="250.0" text="Analytics" textFill="#e76d8a">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="poppins-semibold" />
+                              <String fx:value="invisible-button" />
+                           </styleClass>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="550.0" prefHeight="60.0" prefWidth="260.0">
+               <children>
+                  <ImageView fx:id="settingsPink" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/settingsPink.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="settingsWhite" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/settingsWhite.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="settingsButton" layoutX="10.0" layoutY="5.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="250.0" text="Settings" textFill="#f8e9e5">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="poppins-semibold" />
+                        <String fx:value="invisible-button" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="610.0" prefHeight="60.0" prefWidth="260.0">
+               <children>
+                  <ImageView fx:id="signOutPink" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/signOutPink.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="signOutWhite" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/signOutWhite.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="signOutButton" layoutX="10.0" layoutY="5.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="250.0" text="Sign Out" textFill="#f8e9e5">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="poppins-semibold" />
+                        <String fx:value="invisible-button" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Label layoutX="80.0" layoutY="11.0" styleClass="playfair-black" text="Kawaii Count" textFill="#f8e9e5">
+               <font>
+                  <Font name="Georgia Italic" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="welcomeMessage" layoutX="80.0" layoutY="41.0" styleClass="poppins-regular" text="Welcome, user!" textFill="#f8e9e5" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -22,7 +22,7 @@ public class LoginPageController
     @FXML private PasswordField passwordField;
 
     @FXML
-    private void login()
+    private void login() throws IOException
     {
         String user = usernameField.getText();
         String pass = passwordField.getText();
@@ -42,7 +42,7 @@ public class LoginPageController
             return;
         }
 
-        System.out.println("working!");
+        switchToInventoryPage();
     }
 
     @FXML
@@ -97,5 +97,10 @@ public class LoginPageController
                 System.out.println("Failed to Switch Scenes: " + e.getMessage());
             }
         });
+    }
+
+    private void switchToInventoryPage() throws IOException
+    {
+        App.setRoot("inventory-page", App.MAIN_WIDTH, App.MAIN_HEIGHT);
     }
 }
