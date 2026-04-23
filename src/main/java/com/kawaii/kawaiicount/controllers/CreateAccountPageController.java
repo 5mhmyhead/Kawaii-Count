@@ -106,7 +106,7 @@ public class CreateAccountPageController
         transition.setOnFinished(_ -> {
             try
             {
-                App.setRoot("login-page", App.WIDTH, App.HEIGHT);
+                App.setRoot("login-page", App.WIDTH, App.HEIGHT, false);
             }
             catch (IOException e)
             {

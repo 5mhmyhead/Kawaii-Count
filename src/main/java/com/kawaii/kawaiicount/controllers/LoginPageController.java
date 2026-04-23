@@ -4,6 +4,7 @@ import com.kawaii.kawaiicount.App;
 import com.kawaii.kawaiicount.objects.Account;
 import com.kawaii.kawaiicount.services.AccountService;
 import com.kawaii.kawaiicount.utilities.AnimationHelper;
+import com.kawaii.kawaiicount.utilities.Session;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -42,6 +43,11 @@ public class LoginPageController
             return;
         }
 
+        // SET CREDENTIALS FOR MAIN PAGE USAGE
+        Session.setUserId(account.getUserId());
+        Session.setUsername(account.getUsername());
+        Session.setUserType(account.getAccountType());
+
         switchToInventoryPage();
     }
 
@@ -54,7 +60,7 @@ public class LoginPageController
         transition.setOnFinished(_ -> {
             try
             {
-                App.setRoot("title-page", App.WIDTH, App.HEIGHT);
+                App.setRoot("title-page", App.WIDTH, App.HEIGHT, false);
             }
             catch (IOException e)
             {
@@ -72,7 +78,7 @@ public class LoginPageController
         transition.setOnFinished(_ -> {
             try
             {
-                App.setRoot("recover-page", App.WIDTH, App.HEIGHT);
+                App.setRoot("recover-page", App.WIDTH, App.HEIGHT, false);
             }
             catch (IOException e)
             {
@@ -90,7 +96,7 @@ public class LoginPageController
         transition.setOnFinished(_ -> {
             try
             {
-                App.setRoot("create-account-page", App.WIDTH, App.HEIGHT);
+                App.setRoot("create-account-page", App.WIDTH, App.HEIGHT, false);
             }
             catch (IOException e)
             {
@@ -101,6 +107,6 @@ public class LoginPageController
 
     private void switchToInventoryPage() throws IOException
     {
-        App.setRoot("inventory-page", App.MAIN_WIDTH, App.MAIN_HEIGHT);
+        App.setRoot("inventory-page", App.MAIN_WIDTH, App.MAIN_HEIGHT, true);
     }
 }

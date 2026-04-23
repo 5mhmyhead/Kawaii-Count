@@ -55,7 +55,7 @@
                         </Button>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutY="60.0" prefHeight="60.0" prefWidth="260.0">
+                  <AnchorPane layoutY="60.0" prefHeight="60.0" prefWidth="260.0" styleClass="sidebar-item">
                      <children>
                         <ImageView fx:id="menuPink" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -78,7 +78,7 @@
                         </Button>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutY="120.0" prefHeight="60.0" prefWidth="260.0">
+                  <AnchorPane layoutY="120.0" prefHeight="60.0" prefWidth="260.0" styleClass="sidebar-item">
                      <children>
                         <ImageView fx:id="ordersPink" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -101,7 +101,7 @@
                         </Button>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutY="180.0" prefHeight="60.0" prefWidth="260.0">
+                  <AnchorPane fx:id="analyticsPane" layoutY="180.0" prefHeight="60.0" prefWidth="260.0" styleClass="sidebar-item">
                      <children>
                         <ImageView fx:id="analyticsPink" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -126,7 +126,7 @@
                   </AnchorPane>
                </children>
             </AnchorPane>
-            <AnchorPane layoutY="550.0" prefHeight="60.0" prefWidth="260.0">
+            <AnchorPane layoutY="550.0" prefHeight="60.0" prefWidth="260.0" styleClass="sidebar-item">
                <children>
                   <ImageView fx:id="settingsPink" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -149,7 +149,7 @@
                   </Button>
                </children>
             </AnchorPane>
-            <AnchorPane layoutY="610.0" prefHeight="60.0" prefWidth="260.0">
+            <AnchorPane layoutY="610.0" prefHeight="60.0" prefWidth="260.0" styleClass="sidebar-item">
                <children>
                   <ImageView fx:id="signOutPink" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>

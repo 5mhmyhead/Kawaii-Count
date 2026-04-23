@@ -9,7 +9,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="parentContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kawaii.kawaiicount.controllers.analyticsPageController">
+<AnchorPane fx:id="parentContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@../styles/style.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.kawaii.kawaiicount.controllers.AnalyticsPageController">
    <children>
       <Rectangle fill="#f8e9e5" height="720.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1280.0" />
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="700.0" prefWidth="260.0">
@@ -32,7 +32,7 @@
             </AnchorPane>
             <AnchorPane layoutY="125.0" prefHeight="240.0" prefWidth="260.0">
                <children>
-                  <AnchorPane prefHeight="60.0" prefWidth="260.0">
+                  <AnchorPane prefHeight="60.0" prefWidth="260.0" styleClass="sidebar-item">
                      <children>
                         <ImageView fx:id="inventoryPink" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -55,7 +55,7 @@
                         </Button>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutY="60.0" prefHeight="60.0" prefWidth="260.0">
+                  <AnchorPane layoutY="60.0" prefHeight="60.0" prefWidth="260.0" styleClass="sidebar-item">
                      <children>
                         <ImageView fx:id="menuPink" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -78,7 +78,7 @@
                         </Button>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutY="120.0" prefHeight="60.0" prefWidth="260.0">
+                  <AnchorPane layoutY="120.0" prefHeight="60.0" prefWidth="260.0" styleClass="sidebar-item">
                      <children>
                         <ImageView fx:id="ordersPink" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -101,7 +101,7 @@
                         </Button>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutY="180.0" prefHeight="60.0" prefWidth="260.0">
+                  <AnchorPane fx:id="analyticsPane" layoutY="180.0" prefHeight="60.0" prefWidth="260.0">
                      <children>
                         <ImageView fx:id="analyticsWhite" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -126,7 +126,7 @@
                   </AnchorPane>
                </children>
             </AnchorPane>
-            <AnchorPane layoutY="550.0" prefHeight="60.0" prefWidth="260.0">
+            <AnchorPane layoutY="550.0" prefHeight="60.0" prefWidth="260.0" styleClass="sidebar-item">
                <children>
                   <ImageView fx:id="settingsPink" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -149,7 +149,7 @@
                   </Button>
                </children>
             </AnchorPane>
-            <AnchorPane layoutY="610.0" prefHeight="60.0" prefWidth="260.0">
+            <AnchorPane layoutY="610.0" prefHeight="60.0" prefWidth="260.0" styleClass="sidebar-item">
                <children>
                   <ImageView fx:id="signOutPink" fitHeight="32.0" fitWidth="32.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>

@@ -10,6 +10,7 @@ import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
 import java.io.IOException;
+import java.util.List;
 
 public class AnimationHelper
 {
@@ -77,7 +78,7 @@ public class AnimationHelper
     }
 
     // SETS UP THE ANIMATED SIDEBAR SLIDE
-    public static void setupSidebarButton(ActiveSidebarItem active, SidebarItem target)
+    public static void setupSidebarButton(ActiveSidebarItem active, SidebarItem target, List<SidebarItem> allTargets)
     {
         final Color SOFT_RED = new Color(0.906, 0.427, 0.541, 1.0);
         final Color OFF_WHITE = new Color(0.973, 0.914, 0.898, 1.0);
@@ -107,16 +108,19 @@ public class AnimationHelper
                 int width = isSignOut ? App.WIDTH : App.MAIN_WIDTH;
                 int height = isSignOut ? App.HEIGHT : App.MAIN_HEIGHT;
 
-                App.setRoot(target.fxml(), width, height);
+                App.setRoot(target.fxml(), width, height, isSignOut);
             }
             catch (IOException e)
             {
                 System.out.println("Failed to switch scenes: " + e.getMessage());
+                e.printStackTrace();
             }
         });
 
         target.button().setOnAction(_ -> {
-            active.selectionIndicator().setMouseTransparent(true);
+            // BLOCK ALL BUTTONS DURING ANIMATION
+            active.button().setDisable(true);
+            allTargets.forEach(t -> t.button().setDisable(true));
 
             fromButtonColor.play();
             toButtonColor.play();

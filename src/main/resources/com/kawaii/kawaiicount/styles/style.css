@@ -151,16 +151,11 @@
     -fx-font-size: 16px;
 }
 
-.invisible-button:hover {
-    -fx-cursor: hand;
-    -fx-font-size: 16px;
-}
-
 .invisible-button:disabled {
     -fx-opacity: 1.0;
 }
 
-/*LOGIN PAGE TEXT FIELDS*/
+/* LOGIN PAGE TEXT FIELDS */
 .login-field-container {
     -fx-background-color: -fx-off-white;
     -fx-border-color: -fx-soft-red;
@@ -197,4 +192,14 @@
 .text-underline:hover {
     -fx-cursor: hand;
     -fx-underline: true;
+}
+
+/* MAIN INVENTORY PAGE STYLING */
+.sidebar-item {
+    transition: 0.2s ease;
+}
+
+.sidebar-item:hover {
+    -fx-cursor: hand;
+    -fx-opacity: 0.75;
 }

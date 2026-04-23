@@ -27,7 +27,6 @@ public class AccountRepository
                     return new Account(
                         rs.getInt("user_id"),
                         rs.getString("username"),
-                        rs.getString("password"),
                         rs.getString("account_type")
                     );
                 }

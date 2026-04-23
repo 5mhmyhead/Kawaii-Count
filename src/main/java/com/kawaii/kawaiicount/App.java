@@ -26,7 +26,7 @@ public class App extends Application
     public void start(Stage stage) throws IOException
     {
         initialize();
-        scene = new Scene(loadFXML("inventory-page"), MAIN_WIDTH, MAIN_HEIGHT);
+        scene = new Scene(loadFXML("startup-animation"), WIDTH, HEIGHT);
 
         stage.setTitle("Kawaii Count");
         stage.setResizable(false);
@@ -37,13 +37,15 @@ public class App extends Application
     }
 
     // PUBLIC FUNCTION TO SWITCH BETWEEN SCENES
-    public static void setRoot(String fxml, int width, int height) throws IOException
+    public static void setRoot(String fxml, int width, int height, boolean center) throws IOException
     {
         Stage stage = (Stage) scene.getWindow();
         scene = new Scene(loadFXML(fxml), width, height);
 
         stage.setScene(scene);
         stage.sizeToScene();
+
+        if (center) stage.centerOnScreen();
     }
 
     private static Parent loadFXML(String fxml) throws IOException

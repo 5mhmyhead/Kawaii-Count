@@ -42,6 +42,6 @@ public class StartupAnimationController
 
     private void switchToTitlePage() throws IOException
     {
-        App.setRoot("title-page", App.WIDTH, App.HEIGHT);
+        App.setRoot("title-page", App.WIDTH, App.HEIGHT, false);
     }
 }
