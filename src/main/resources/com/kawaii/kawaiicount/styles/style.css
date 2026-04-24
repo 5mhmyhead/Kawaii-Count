@@ -7,6 +7,7 @@
     -fx-orange: #FFD6B7;
     -fx-dark-blue: #253657;
     -fx-light-pink: #F1B8C0;
+    -fx-dark-purple: #693c5b;
 }
 
 /* FONTS */
@@ -24,7 +25,8 @@
 }
 
 .poppins-bold {
-    -fx-font-family: "Poppins Bold";
+    -fx-font-family: "Poppins";
+    -fx-font-weight: 700;
 }
 
 .poppins-black {
@@ -37,7 +39,8 @@
 }
 
 .playfair-bold {
-    -fx-font-family: "Playfair Display Bold";
+    -fx-font-family: "Playfair Display";
+    -fx-font-weight: 700;
 }
 
 .playfair-black {
@@ -202,4 +205,61 @@
 .sidebar-item:hover {
     -fx-cursor: hand;
     -fx-opacity: 0.75;
+}
+
+/* SETTINGS STYLING */
+.account-details-field {
+    -fx-background-color: -fx-off-white;
+    -fx-border-color: -fx-dark-purple;
+
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+
+    -fx-alignment: center-left;
+    -fx-background-insets: 0;
+
+    -fx-highlight-fill: -fx-dark-purple;
+    -fx-highlight-text-fill: -fx-off-white;
+}
+
+.account-deletion-field {
+    -fx-text-fill: -fx-dark-blue;
+
+    -fx-background-color: -fx-off-white;
+    -fx-border-color: -fx-soft-red;
+
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+
+    -fx-alignment: center-left;
+    -fx-background-insets: 0;
+
+    -fx-highlight-fill: -fx-soft-red;
+    -fx-highlight-text-fill: -fx-off-white;
+}
+
+.button-dark-purple {
+    -fx-text-fill: -fx-off-white;
+    -fx-background-color: -fx-dark-purple;
+
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+
+    transition: 0.2s ease;
+}
+
+.button-dark-purple:hover {
+    -fx-cursor: hand;
+
+    -fx-text-fill: -fx-dark-purple;
+    -fx-background-color: -fx-off-white;
+
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+
+    -fx-border-width: 1;
+    -fx-border-style: solid;
+    -fx-border-color: -fx-dark-purple;
 }

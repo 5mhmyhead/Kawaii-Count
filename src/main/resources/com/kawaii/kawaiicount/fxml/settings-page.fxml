@@ -3,6 +3,8 @@
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -178,6 +180,138 @@
                </font>
             </Label>
             <Label fx:id="welcomeMessage" layoutX="80.0" layoutY="41.0" styleClass="poppins-regular" text="Welcome, user!" textFill="#f8e9e5" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="270.0" prefHeight="720.0" prefWidth="1010.0">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="30.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/settingsBlue.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="80.0" layoutY="10.0" styleClass="playfair-bold" text="Settings" textFill="#253657">
+               <font>
+                  <Font name="Georgia Italic" size="54.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="10.0" layoutY="100.0" prefHeight="428.0" prefWidth="990.0">
+               <children>
+                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#693c5b" height="428.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="990.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8e9e5" height="408.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="970.0" />
+                  <AnchorPane fx:id="accountDetailsPane" layoutX="10.0" layoutY="10.0" prefHeight="210.0" prefWidth="970.0">
+                     <children>
+                        <Label layoutX="20.0" layoutY="15.0" styleClass="playfair-bold" text="Account Details" textFill="#253657">
+                           <font>
+                              <Font name="Georgia Italic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="changePasswordLabel" layoutX="20.0" layoutY="217.0" styleClass="playfair-bold" text="Change Password" textFill="#253657">
+                           <font>
+                              <Font name="Georgia Italic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="31.0" layoutY="67.0" styleClass="poppins-bold" text="Username" textFill="#693c5b" />
+                        <TextField fx:id="usernameField" layoutX="31.0" layoutY="90.0" prefHeight="36.0" prefWidth="344.0">
+                           <styleClass>
+                              <String fx:value="account-details-field" />
+                              <String fx:value="poppins-regular" />
+                           </styleClass>
+                        </TextField>
+                        <Label layoutX="385.0" layoutY="67.0" styleClass="poppins-bold" text="Email Address" textFill="#693c5b" />
+                        <TextField fx:id="emailField" layoutX="385.0" layoutY="90.0" prefHeight="36.0" prefWidth="344.0">
+                           <styleClass>
+                              <String fx:value="account-details-field" />
+                              <String fx:value="poppins-regular" />
+                           </styleClass>
+                        </TextField>
+                        <Button layoutX="739.0" layoutY="90.0" mnemonicParsing="false" onAction="#updateProfile" prefHeight="36.0" prefWidth="200.0" text="Update Profile">
+                           <styleClass>
+                              <String fx:value="button-dark-purple" />
+                              <String fx:value="poppins-bold" />
+                           </styleClass>
+                        </Button>
+                        <Label fx:id="currentAccountTypeLabel" layoutX="31.0" layoutY="136.0" styleClass="poppins-bold" text="Your current account type: Manager" textFill="#693c5b">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="accountTypeConfirmationField" layoutX="31.0" layoutY="168.0" prefHeight="36.0" prefWidth="450.0" styleClass="account-details-field" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8e9e5" height="2.0" layoutX="43.0" layoutY="168.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="150.0" />
+                        <Label layoutX="46.0" layoutY="160.0" styleClass="poppins-regular" text="Manager Provided Password" textFill="#693c5b">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="changeAccountTypeButton" layoutX="491.0" layoutY="168.0" mnemonicParsing="false" onAction="#changeAccountType" prefHeight="36.0" prefWidth="238.0" text="Change Account Type to Worker">
+                           <styleClass>
+                              <String fx:value="button-dark-purple" />
+                              <String fx:value="poppins-bold" />
+                           </styleClass>
+                        </Button>
+                        <Label layoutX="31.0" layoutY="329.0" styleClass="poppins-bold" text="Old Password" textFill="#693c5b" />
+                        <PasswordField fx:id="oldPasswordField" layoutX="31.0" layoutY="352.0" prefHeight="36.0" prefWidth="344.0" styleClass="account-details-field" />
+                        <Label layoutX="385.0" layoutY="329.0" styleClass="poppins-bold" text="New Password" textFill="#693c5b" />
+                        <PasswordField fx:id="newPasswordField" layoutX="385.0" layoutY="352.0" prefHeight="36.0" prefWidth="344.0" styleClass="account-details-field" />
+                        <Button layoutX="739.0" layoutY="352.0" mnemonicParsing="false" onAction="#changePassword" prefHeight="36.0" prefWidth="200.0" text="Change Password">
+                           <styleClass>
+                              <String fx:value="button-dark-purple" />
+                              <String fx:value="poppins-bold" />
+                           </styleClass>
+                        </Button>
+                        <AnchorPane fx:id="managerPasswordPane" layoutY="250.0" prefHeight="75.0" prefWidth="970.0">
+                           <children>
+                              <Label layoutX="31.0" layoutY="12.0" styleClass="poppins-bold" text="Old Manager Password" textFill="#693c5b" />
+                              <PasswordField fx:id="oldManagerPasswordField" layoutX="31.0" layoutY="35.0" prefHeight="36.0" prefWidth="344.0" styleClass="account-details-field" />
+                              <Label layoutX="385.0" layoutY="12.0" styleClass="poppins-bold" text="New Manager Password" textFill="#693c5b" />
+                              <PasswordField fx:id="newManagerPasswordField" layoutX="385.0" layoutY="35.0" prefHeight="36.0" prefWidth="344.0" styleClass="account-details-field" />
+                              <Button layoutX="739.0" layoutY="35.0" mnemonicParsing="false" onAction="#updateManagerPassword" prefHeight="36.0" prefWidth="200.0" text="Update Manager Password">
+                                 <styleClass>
+                                    <String fx:value="button-dark-purple" />
+                                    <String fx:value="poppins-bold" />
+                                 </styleClass>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <Label layoutX="580.0" layoutY="15.0" styleClass="poppins-bold" text="Note: Any changes will sign you out of the current session." textFill="#693c5b" />
+                        <Label fx:id="accountDetailsErrorMessage" alignment="CENTER_RIGHT" layoutX="580.0" layoutY="35.0" prefHeight="17.0" prefWidth="356.0" styleClass="poppins-bold" textAlignment="RIGHT" textFill="#693c5b" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="538.0" prefHeight="172.0" prefWidth="990.0">
+               <children>
+                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#e76d8a" height="172.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="990.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8e9e5" height="152.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="970.0" />
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="152.0" prefWidth="970.0">
+                     <children>
+                        <Label layoutX="20.0" layoutY="15.0" styleClass="playfair-bold" text="Account Deletion" textFill="#253657">
+                           <font>
+                              <Font name="Georgia Italic" size="28.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="31.0" layoutY="62.0" styleClass="poppins-bold" text="WARNING: Once you delete your account, there is no going back. Please be certain." textFill="#e76d8a">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="accountDeletionConfirmationField" layoutX="31.0" layoutY="100.0" prefHeight="36.0" prefWidth="450.0" styleClass="account-deletion-field" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8e9e5" height="2.0" layoutX="43.0" layoutY="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="95.0" />
+                        <Label layoutX="46.0" layoutY="92.0" styleClass="poppins-regular" text="Current Password" textFill="#e76d8a">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="491.0" layoutY="100.0" mnemonicParsing="false" onAction="#deleteAccount" prefHeight="36.0" prefWidth="200.0" text="Delete Account">
+                           <styleClass>
+                              <String fx:value="button-pink" />
+                              <String fx:value="poppins-bold" />
+                           </styleClass>
+                        </Button>
+                        <Label fx:id="accountDeletionErrorMessage" alignment="CENTER_RIGHT" layoutX="580.0" layoutY="15.0" prefHeight="17.0" prefWidth="356.0" styleClass="poppins-bold" textAlignment="RIGHT" textFill="#e76d8a" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </children>
