@@ -9,6 +9,7 @@ import com.kawaii.kawaiicount.services.AccountService.ChangeAccountTypeResult;
 import com.kawaii.kawaiicount.services.AccountService.ChangePasswordResult;
 import com.kawaii.kawaiicount.services.AccountService.DeleteAccountResult;
 import com.kawaii.kawaiicount.utilities.AnimationHelper;
+import com.kawaii.kawaiicount.utilities.ManagerPasswordHelper;
 import com.kawaii.kawaiicount.utilities.Session;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -125,6 +126,7 @@ public class SettingsPageController extends BaseMainPageController
         }
 
         Session.setManagerProvidedPW(newPass);
+        ManagerPasswordHelper.save(newPass);
         AnimationHelper.showErrorMessage(accountDetailsErrorMessage, "Manager password updated!", 3000, 2000);
     }
 

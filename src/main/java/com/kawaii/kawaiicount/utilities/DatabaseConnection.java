@@ -16,4 +16,9 @@ public class DatabaseConnection
         String url = "jdbc:sqlite:" + dbPath;
         return DriverManager.getConnection(url);
     }
+
+    public static String getDirectory()
+    {
+        return System.getProperty("user.home") + "/KawaiiCount/";
+    }
 }

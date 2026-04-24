@@ -1,6 +1,8 @@
 package com.kawaii.kawaiicount;
 
 import com.kawaii.kawaiicount.utilities.DatabaseInitializer;
+import com.kawaii.kawaiicount.utilities.ManagerPasswordHelper;
+import com.kawaii.kawaiicount.utilities.Session;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -56,8 +58,9 @@ public class App extends Application
 
     private void initialize()
     {
-        // INITIALIZE THE DATABASE FIRST
+        // INITIALIZE THE DATABASE AND MANAGER PASS FIRST
         DatabaseInitializer.initialize();
+        Session.setManagerProvidedPW(ManagerPasswordHelper.load());
         // INITIALIZE FONT FACES
         // POPPINS
         Font.loadFont(getClass().getResourceAsStream("fonts/poppins/Poppins-Regular.ttf"), 14);
