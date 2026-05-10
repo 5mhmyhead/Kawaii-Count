@@ -147,6 +147,31 @@
     -fx-border-color: -fx-off-white;
 }
 
+.button-white-purple-text {
+    -fx-text-fill: -fx-dark-purple;
+    -fx-background-color: -fx-off-white;
+
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+
+    transition: 0.2s ease;
+}
+
+.button-white-purple-text:hover {
+    -fx-outline: none;
+    -fx-cursor: hand;
+
+    -fx-text-fill: -fx-off-white;
+    -fx-background-color: -fx-dark-purple;
+
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+
+    -fx-border-width: 1;
+    -fx-border-style: solid;
+    -fx-border-color: -fx-off-white;
+}
+
 .button-dark-purple {
     -fx-text-fill: -fx-off-white;
     -fx-background-color: -fx-dark-purple;
@@ -194,6 +219,30 @@
 
     -fx-border-radius: 10;
     -fx-background-radius: 10;
+}
+
+.button-light-pink {
+    -fx-text-fill: -fx-off-white;
+    -fx-background-color: -fx-pink;
+
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+
+    transition: 0.2s ease;
+}
+
+.button-light-pink:hover {
+    -fx-cursor: hand;
+
+    -fx-text-fill: -fx-pink;
+    -fx-background-color: -fx-off-white;
+
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+
+    -fx-border-width: 1;
+    -fx-border-style: solid;
+    -fx-border-color: -fx-pink;
 }
 
 .invisible-button {
@@ -256,6 +305,25 @@
     -fx-opacity: 0.75;
 }
 
+/*INVENTORY STYLING*/
+.inventory-field-input {
+    -fx-font-family: "Poppins";
+    -fx-text-fill: -fx-off-white;
+
+    -fx-background-color: -fx-dark-purple;
+    -fx-border-color: -fx-off-white;
+
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+
+    -fx-alignment: center-left;
+    -fx-background-insets: 0;
+
+    -fx-highlight-fill: -fx-off-white;
+    -fx-highlight-text-fill: -fx-dark-purple;
+}
+
 /* SETTINGS STYLING */
 .account-details-field {
     -fx-background-color: -fx-off-white;
@@ -290,10 +358,36 @@
 }
 
 /* COMBO BOX STYLING */
+/* ANALYTICS FILTER COMBO BOX*/
 .combo-box .list-cell {
     -fx-text-fill: -fx-dark-purple;
 }
 
 .combo-box .arrow {
     -fx-background-color: -fx-dark-purple;
+}
+
+/* MANAGE INVENTORY COMBO BOX */
+.inventory-combo-box {
+    -fx-font-family: "Poppins Black";
+
+    -fx-background-color: -fx-off-white;
+    -fx-text-fill: -fx-dark-purple;
+
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
+.inventory-combo-box .list-cell {
+    -fx-text-fill: -fx-dark-purple;
+}
+
+.inventory-combo-box .list-view .list-cell {
+    -fx-text-fill: -fx-dark-purple;
+    -fx-background-color: -fx-off-white;
+}
+
+.inventory-combo-box .list-view .list-cell:hover {
+    -fx-background-color : -fx-dark-purple;
+    -fx-text-fill: -fx-off-white;
 }

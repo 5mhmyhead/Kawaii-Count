@@ -186,7 +186,7 @@
             <Label fx:id="welcomeMessage" layoutX="80.0" layoutY="41.0" styleClass="poppins-regular" text="Welcome, user!" textFill="#f8e9e5" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="271.0" prefHeight="720.0" prefWidth="1010.0">
+      <AnchorPane layoutX="270.0" prefHeight="720.0" prefWidth="1010.0">
          <children>
             <AnchorPane layoutX="670.0" layoutY="385.0" prefHeight="157.5" prefWidth="330.0">
                <children>

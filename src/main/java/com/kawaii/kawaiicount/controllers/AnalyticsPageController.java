@@ -18,7 +18,7 @@ public class AnalyticsPageController extends BaseMainPageController
             new SidebarItem(menuButton, menuWhite, "menu-page", 300, -120),
             new SidebarItem(ordersButton, ordersWhite, "orders-page", 300, -60),
             new SidebarItem(settingsButton, settingsWhite, "settings-page", 500, 245),
-            new SidebarItem(signOutButton, signOutWhite, "title-page", 500, 245)
+            new SidebarItem(signOutButton, signOutWhite, "title-page", 500, 305)
         ));
     }
 }

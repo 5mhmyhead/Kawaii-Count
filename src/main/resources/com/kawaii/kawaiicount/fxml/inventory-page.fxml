@@ -2,10 +2,16 @@
 
 <?import java.lang.String?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
@@ -178,6 +184,195 @@
                </font>
             </Label>
             <Label fx:id="welcomeMessage" layoutX="80.0" layoutY="41.0" styleClass="poppins-regular" text="Welcome, user!" textFill="#f8e9e5" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="270.0" prefHeight="720.0" prefWidth="1010.0">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="30.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/inventoryBlue.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="80.0" layoutY="10.0" styleClass="playfair-bold" text="Inventory" textFill="#253657">
+               <font>
+                  <Font name="Georgia Italic" size="54.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="10.0" layoutY="140.0" prefHeight="280.0" prefWidth="990.0">
+               <children>
+                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#f5a1a1" height="280.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="990.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f8e9e5" height="260.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="970.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="430.0" prefHeight="280.0" prefWidth="990.0">
+               <children>
+                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#693c5b" height="280.0" layoutX="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="955.0" />
+                  <Circle centerX="35.0" centerY="35.0" fill="#693c5b" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle centerX="35.0" centerY="35.0" fill="#693c5b" layoutY="70.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle centerX="35.0" centerY="35.0" fill="#693c5b" layoutY="140.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle centerX="35.0" centerY="35.0" fill="#693c5b" layoutY="210.0" radius="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+                  <Circle centerX="67.0" centerY="67.0" layoutX="390.0" layoutY="-23.0" radius="67.0" rotate="180.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="0.943127962085308" startY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.949999988079071" green="0.6650000214576721" blue="0.7267500162124634" opacity="0.800000011920929" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006711409395973154">
+                                 <color>
+                                    <Color red="0.9607843160629272" green="0.6313725709915161" blue="0.6313725709915161" opacity="0.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9700000286102295" green="0.9145483374595642" blue="0.9021000266075134" opacity="0.30000001192092896" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <Label layoutX="105.0" layoutY="10.0" styleClass="playfair-bold" text="Manage Inventory" textFill="#f8e9e5">
+                     <font>
+                        <Font name="Georgia Italic" size="32.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="60.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/inventoryScales.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane layoutX="710.0" layoutY="72.0" prefHeight="136.0" prefWidth="260.0">
+                     <children>
+                        <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#f8e9e5" height="136.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="260.0" />
+                        <Label layoutX="74.0" layoutY="53.0" styleClass="poppins-bold" text="Image will appear" textFill="#693d5b99" />
+                        <Label layoutX="116.0" layoutY="70.0" styleClass="poppins-bold" text="here" textFill="#693d5b99" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="55.0" layoutY="72.0" prefHeight="32.0" prefWidth="200.0">
+                     <children>
+                        <TextField prefHeight="32.0" prefWidth="200.0" styleClass="inventory-field-input" />
+                        <Rectangle fill="#693c5b" height="5.0" layoutX="15.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="68.0" />
+                        <Label layoutX="18.0" layoutY="-8.0" styleClass="poppins-regular" text="Product ID" textFill="#f8e9e5" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="55.0" layoutY="124.0" prefHeight="32.0" prefWidth="200.0">
+                     <children>
+                        <TextField prefHeight="32.0" prefWidth="200.0" styleClass="inventory-field-input" />
+                        <Rectangle fill="#693c5b" height="5.0" layoutX="15.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="93.0" />
+                        <Label layoutX="18.0" layoutY="-8.0" styleClass="poppins-regular" text="Product Name" textFill="#f8e9e5" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="55.0" layoutY="176.0" prefHeight="32.0" prefWidth="200.0">
+                     <children>
+                        <TextField prefHeight="32.0" prefWidth="200.0" styleClass="inventory-field-input" />
+                        <Rectangle fill="#693c5b" height="5.0" layoutX="15.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="60.0" />
+                        <Label layoutX="18.0" layoutY="-8.0" styleClass="poppins-regular" text="Discount" textFill="#f8e9e5" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="265.0" layoutY="72.0" prefHeight="32.0" prefWidth="200.0">
+                     <children>
+                        <TextField prefHeight="32.0" prefWidth="200.0" styleClass="inventory-field-input" />
+                        <Rectangle fill="#693c5b" height="5.0" layoutX="15.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="40.0" />
+                        <Label layoutX="18.0" layoutY="-8.0" styleClass="poppins-regular" text="Stock" textFill="#f8e9e5" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="265.0" layoutY="124.0" prefHeight="32.0" prefWidth="200.0">
+                     <children>
+                        <TextField prefHeight="32.0" prefWidth="200.0" styleClass="inventory-field-input" />
+                        <Rectangle fill="#693c5b" height="5.0" layoutX="15.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="54.0" />
+                        <Label layoutX="18.0" layoutY="-8.0" styleClass="poppins-regular" text="Price(₱)" textFill="#f8e9e5" />
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="55.0" layoutY="228.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="150.0" text="Add" textFill="#693c5b">
+                     <styleClass>
+                        <String fx:value="button-white-purple-text" />
+                        <String fx:value="poppins-bold" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="215.0" layoutY="228.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="150.0" text="Update" textFill="#693c5b">
+                     <styleClass>
+                        <String fx:value="button-white-purple-text" />
+                        <String fx:value="poppins-bold" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="500.0" layoutY="228.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="150.0" text="Clear" textFill="#693c5b">
+                     <styleClass>
+                        <String fx:value="button-white-purple-text" />
+                        <String fx:value="poppins-bold" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="660.0" layoutY="228.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="150.0" text="Delete" textFill="#693c5b">
+                     <styleClass>
+                        <String fx:value="button-white-purple-text" />
+                        <String fx:value="poppins-bold" />
+                     </styleClass>
+                  </Button>
+                  <Button layoutX="820.0" layoutY="228.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="150.0" text="Import Image" textFill="#693c5b">
+                     <styleClass>
+                        <String fx:value="button-white-purple-text" />
+                        <String fx:value="poppins-bold" />
+                     </styleClass>
+                  </Button>
+                  <ComboBox layoutX="540.0" layoutY="72.0" prefHeight="32.0" prefWidth="150.0" promptText="Select Category" styleClass="inventory-combo-box" />
+                  <ComboBox layoutX="540.0" layoutY="124.0" prefHeight="32.0" prefWidth="150.0" promptText="Select Status" styleClass="inventory-combo-box" />
+                  <ComboBox layoutX="540.0" layoutY="176.0" prefHeight="32.0" prefWidth="150.0" promptText="Select Type" styleClass="inventory-combo-box" />
+                  <Circle centerX="131.0" centerY="131.0" layoutX="457.0" layoutY="88.0" radius="131.0" rotate="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="0.957345971563981" startY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.949999988079071" green="0.6650000214576721" blue="0.7267500162124634" opacity="0.800000011920929" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006711409395973154">
+                                 <color>
+                                    <Color red="0.9607843160629272" green="0.6313725709915161" blue="0.6313725709915161" opacity="0.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9700000286102295" green="0.9145483374595642" blue="0.9021000266075134" opacity="0.30000001192092896" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+                  <Circle centerX="160.0" centerY="160.0" layoutX="730.0" layoutY="-84.0" radius="160.0" rotate="-90.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="0.957345971563981" startY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.949999988079071" green="0.6650000214576721" blue="0.7267500162124634" opacity="0.800000011920929" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.006711409395973154">
+                                 <color>
+                                    <Color red="0.9607843160629272" green="0.6313725709915161" blue="0.6313725709915161" opacity="0.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9700000286102295" green="0.9145483374595642" blue="0.9021000266075134" opacity="0.30000001192092896" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Circle>
+               </children>
+            </AnchorPane>
+            <Button layoutX="800.0" layoutY="94.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="200.0" text="Filter Inventory" textFill="#693c5b">
+               <styleClass>
+                  <String fx:value="button-light-pink" />
+                  <String fx:value="poppins-bold" />
+               </styleClass>
+            </Button>
          </children>
       </AnchorPane>
    </children>
