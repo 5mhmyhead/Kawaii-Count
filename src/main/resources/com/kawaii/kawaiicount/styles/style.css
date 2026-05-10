@@ -147,6 +147,55 @@
     -fx-border-color: -fx-off-white;
 }
 
+.button-dark-purple {
+    -fx-text-fill: -fx-off-white;
+    -fx-background-color: -fx-dark-purple;
+
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+
+    transition: 0.2s ease;
+}
+
+.button-dark-purple:hover {
+    -fx-cursor: hand;
+
+    -fx-text-fill: -fx-dark-purple;
+    -fx-background-color: -fx-off-white;
+
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+
+    -fx-border-width: 1;
+    -fx-border-style: solid;
+    -fx-border-color: -fx-dark-purple;
+}
+
+.button-white-with-purple-border {
+    -fx-text-fill: -fx-dark-purple;
+    -fx-background-color: -fx-off-white;
+
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+
+    -fx-border-width: 1;
+    -fx-border-style: solid;
+    -fx-border-color: -fx-dark-purple;
+
+    transition: 0.2s ease;
+}
+
+.button-white-with-purple-border:hover {
+    -fx-outline: none;
+    -fx-cursor: hand;
+
+    -fx-text-fill: -fx-off-white;
+    -fx-background-color: -fx-dark-purple;
+
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+}
+
 .invisible-button {
     -fx-background-color: transparent;
     -fx-alignment: CENTER-LEFT;
@@ -240,26 +289,11 @@
     -fx-highlight-text-fill: -fx-off-white;
 }
 
-.button-dark-purple {
-    -fx-text-fill: -fx-off-white;
-    -fx-background-color: -fx-dark-purple;
-
-    -fx-border-radius: 10;
-    -fx-background-radius: 10;
-
-    transition: 0.2s ease;
+/* COMBO BOX STYLING */
+.combo-box .list-cell {
+    -fx-text-fill: -fx-dark-purple;
 }
 
-.button-dark-purple:hover {
-    -fx-cursor: hand;
-
-    -fx-text-fill: -fx-dark-purple;
-    -fx-background-color: -fx-off-white;
-
-    -fx-border-radius: 10;
-    -fx-background-radius: 10;
-
-    -fx-border-width: 1;
-    -fx-border-style: solid;
-    -fx-border-color: -fx-dark-purple;
+.combo-box .arrow {
+    -fx-background-color: -fx-dark-purple;
 }

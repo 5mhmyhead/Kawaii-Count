@@ -7,10 +7,12 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class App extends Application
 {
@@ -33,6 +35,11 @@ public class App extends Application
         stage.setTitle("Kawaii Count");
         stage.setResizable(false);
         stage.centerOnScreen();
+
+        Image icon = new Image(Objects.requireNonNull(
+                getClass().getResourceAsStream("/com/kawaii/kawaiicount/images/wakuPeace.png")));
+
+        stage.getIcons().add(icon);
 
         stage.setScene(scene);
         stage.show();
